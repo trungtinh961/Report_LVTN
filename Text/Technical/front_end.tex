@@ -1,0 +1,43 @@
+Nền tảng web, cùng với mobile là một trong hai nền tảng chính để phát triển phần mềm phổ biến nhất hiện nay. Để bắt kịp trước sự bùng nổ của nền tảng mobile, nền tảng web cũng thay đổi rất nhiều theo hướng tích cực. Rất nhiều framework, thư viện Frontend mạnh mẽ đã ra đời để giúp lập trình viên xây dựng được những trang web tương tác cao, hiệu suất tốt mà ít tốn công sức, thời gian.
+\subsubsection{Single Page Application (SPA)}
+Singe Page Application hay Single Page Web Application là một ứng dụng web hay một website mà ở đó tất cả các thao tác của người dùng chỉ diễn ra trên 1 trang duy nhất, tất cả các cấu trúc của trang web (HTML) được load sẵn 1 lần và sẽ không load lại ngay cả khi chuyển trang. Một vài website nổi tiếng như: Gmail, Facebook, Youtube, Twitter,... đều đang sử dụng SPA để tạo nên những trải nghiệm mang tính chiều sâu và chiều rộng cho người dùng.\par
+Có rất nhiều nội dung được lặp lại trên đa số các website. Một số thành phần vẫn được giữ nguyên khi người dùng điều hướng trong web (header, footer, logo, navigation bar,...), một số thì chỉ nằm ở những vị trí cố định (filter bar, banner), và còn rất nhiều layout và template được lặp lại (blog, self-service, thiết lập của google mail). SPA sử dụng hiệu quả những sự lặp lại như này và nhờ vào việc linh động viết lại những thành phần cần thay đổi trong trang hiện tại thay vì tải lại toàn bộ 1 trang mới từ sever. SPA loại bỏ sự ngắt quãng khi người dùng đang trải nghiệm những trang nối tiếp nhau, tạo cho người dùng cảm giác như đang sử dụng 1 ứng dụng trên desktop.\par
+Ưu điểm của SPA:
+\begin{itemize}
+    \item Load 1 lần cho từng file HTML, CSS, JS.
+    \item Hạn chế câu truy vấn đến sever.
+    \item Xây dựng Front-end nhanh và có tính tương thích.
+    \item Tăng trải nghiệm người dùng.
+    \item Giảm thiểu thời gian phát triển và chi phí hạ tầng
+\end{itemize}
+Nhược điểm của SPA:
+\begin{itemize}
+    \item Lần load đầu sẽ cực kì nặng.
+    \item Đi kèm với sự linh hoạt trong thiết kế SPA thì ta sẽ không có một quy chuẩn nhất định.
+    \item Ảnh hưởng tới việc SEO.
+\end{itemize}
+\subsubsection{Framework ReactJS}
+React là thư viện JavaScript phổ biến nhất để xây dựng giao diện người dùng (UI) và có một cộng đồng hỗ trợ đông
+đảo. Nó cho tốc độ phản hồi tuyệt vời khi user nhập liệu bằng cách sử dụng phương pháp mới để render trang web. Lập trình viên khi xây dựng SPA bằng React sẽ cảm thấy dễ hiểu mã nguồn mình đang viết, có thể tái sử dụng mã nguồn, tăng tính module hoá cho mã nguồn, giúp việc phát triển một ứng dụng phía người dùng lớn trở nên khả thi. \par
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=10cm]{Image/Technical/react_logo.png}
+        \caption{ReactJS.}
+        \label{reactjs}
+    \end{center}
+\end{figure}
+React nổi tiếng và đi đầu trong cơ chế DOM ảo (Virtual DOM), khi cập nhật một chi tiết trên giao diện, một DOM ảo sẽ được tạo ra, tải lên bộ nhớ, sau đó so sánh với phiên bản DOM ảo trước đó để tìm kiếm sự khác nhau giữa hai phiên bản, từ đó rút ra được những thành phần cần thiết cần cập nhật và giữ nguyên những thành phần còn lại. Điều này là rất tốt về mặt hiệu suất. Mặt khác, cơ chế trên còn giúp mã nguồn dễ hiểu, dễ sửa lỗi hơn. \par
+React sửa dụng Encapsulated Components để quản lý trạng thái, sau đó kết hợp chúng lại để tạo ra màn hình giao diện phức tạp. Vì Component được viết bằng JavaScript thay vì HTML template, ta có thể dễ dàng truyền dữ liệu phong phú qua từng thành phần khác nhau, rất linh động và đơn giản. Ngoài ra, React tách hẳn trạng thái của ứng dụng ra khỏi DOM, giúp việc phát triển trở nên dễ dàng vì nhiều thành phần độc lập không ràng buộc với nhau.\par
+Ưu điểm của ReactJS:
+\begin{itemize}
+    \item Dễ sử dụng.
+    \item Hỗ trợ Reusable Component trong Java.
+    \item Hiệu suất tốt hơn với Virtual DOM.
+    \item Thân thiện với SEO.
+\end{itemize}
+Nhược điểm của React:
+\begin{itemize}
+    \item Không có sẵn các tính năng như gọi API, quản lý route, quản lý state,.. cần phải sử dụng thư viện bên ngoài.
+    \item React khá nặng nếu so với các framework khác.
+    \item Khó tiếp cận cho người mới học Web.
+\end{itemize}

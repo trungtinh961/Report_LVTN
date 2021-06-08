@@ -1,0 +1,353 @@
+\documentclass[a4paper]{article}
+\usepackage{vntex}
+\usepackage{a4wide,amssymb,epsfig,latexsym,multicol,array,hhline,fancyhdr}
+% \usepackage{geometry}
+%  \geometry{
+%  a4paper,
+%  total={160mm,237mm},
+%  left=30mm,
+%  top=20mm,
+%  }
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\usepackage{lastpage}
+\usepackage{indentfirst}
+\setlength{\parskip}{0.5em}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{graphicx}							% Standard graphics package
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage[framemethod=tikz]{mdframed}% For highlighting paragraph backgrounds
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{tikz}
+\usepackage{listings}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage{hyperref}
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true}
+\usepackage{titlesec}
+% \titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+\newtheorem{theorem}{{\bf Định lý}}
+\newtheorem{property}{{\bf Tính chất}}
+\newtheorem{proposition}{{\bf Mệnh đề}}
+\newtheorem{corollary}[proposition]{{\bf Hệ quả}}
+\newtheorem{lemma}[proposition]{{\bf Bổ đề}}
+
+\everymath{\color{black}}
+%\usepackage{fancyhdr}
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+ \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=8mm, height=8mm]{Image/hcmut.png}}
+   \end{picture}&
+	\begin{tabular}{l}
+		\textbf{\bf \ttfamily Trường Đại Học Bách Khoa Tp.Hồ Chí Minh}\\
+		\textbf{\bf \ttfamily Khoa Khoa Học và Kỹ Thuật Máy Tính}
+	\end{tabular} 	
+ \end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+	\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\scriptsize \ttfamily Luận văn tốt nghiệp - HK202 - Năm học 2020 - 2021}
+\fancyfoot[R]{\scriptsize \ttfamily Trang {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+
+%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Matlab,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	numbers=left,
+	stepnumber=1,
+	numbersep=1pt,    
+	firstnumber=1,
+	numberfirstline=true
+}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\textbf{{\Large ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH \\
+TRƯỜNG ĐẠI HỌC BÁCH KHOA \\
+KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH}}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=3.5cm]{Image/hcmut.png}
+\end{center}
+\end{figure}
+
+\vspace{0.5cm}
+
+
+\begin{center}
+\textbf{{\Large LUẬN VĂN TỐT NGHIỆP ĐẠI HỌC}}\\
+\vspace{1cm}
+\textbf{{\Large XÂY DỰNG HỆ THỐNG QUẢN LÝ QUÁ TRÌNH GIA CÔNG NHUỘM CHO MỘT DOANH NGHIỆP VẢI SỢI TRÊN NỀN WEB}}\\
+\vspace{1cm}
+\textbf{{\Large Ngành: Khoa học Máy tính}}
+\end{center}
+
+\vspace{2cm}
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{lll}
+\hspace{5 cm}
+& \textbf{{\large GVHD:}} & {\large ThS. Nguyễn Thị Ái Thảo} \\
+& \textbf{{\large GVPB:}} & {\large ThS. Trần Quang}\\
+&  & \textbf{---o0o---} \\
+& \textbf{{\large SVTH1:}} & {\large Nguyễn Trung Tính - 1713521} \\
+& \textbf{{\large SVTH2:}} & {\large Nguyễn Xuân Huy - 1711574} \\
+\end{tabular}
+\end{table}
+
+\begin{center}
+{\footnotesize {\large TP. HỒ CHÍ MINH, THÁNG 07/2021}}
+\end{center}
+\end{titlepage}
+
+
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\addcontentsline{toc}{section}{Lời cam đoan}
+\section*{Lời cam đoan}
+\input{Text/Salutation/loi_cam_doan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\addcontentsline{toc}{section}{Lời cảm ơn}
+\section*{Lời cảm ơn}
+\input{Text/Salutation/loi_cam_on}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\addcontentsline{toc}{section}{Tóm tắt đề tài}
+\section*{Tóm tắt đề tài}
+\input{Text/Header/tom_tat_de_tai}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\tableofcontents
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\addcontentsline{toc}{section}{Danh sách hình vẽ}
+\listoffigures
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\addcontentsline{toc}{section}{Danh sách bảng}
+\listoftables
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Giới thiệu đề tài}
+\subsection{Tổng quan đề tài}
+\input{Text/Header/tong_quan_de_tai}
+
+\subsection{Mục tiêu và phạm vi của đề tài}
+\input{Text/Header/muc_tieu_va_pham_vi}
+
+\subsection{Ý nghĩa thực tiễn}
+\input{Text/Header/y_nghia_thuc_tien}
+
+\subsection{Cấu trúc luận văn}
+\input{Text/Header/cau_truc_luan_van}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Kiến thức nền tảng và công nghệ}
+\input{Text/Technical/general}
+
+\subsection{Các công nghệ Client Side (Frontend)}
+\input{Text/Technical/front_end}
+
+\subsection{Các công nghệ Server Side (Backend)}
+\input{Text/Technical/back_end}
+
+\subsection{Cơ sở dữ liệu}
+\input{Text/Technical/database}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Phân tích yêu cầu}
+
+\subsection{Chức năng của hệ thống}
+\input{Text/Requires/chuc_nang_he_thong}
+
+\subsection{Yêu cầu phi chức năng của hệ thống}
+\input{Text/Requires/phi_chuc_nang_he_thong}
+
+\subsection{Usecase}
+\input{Text/Requires/usecase}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Thiết kế hệ thống}
+
+\subsection{Kiến trúc hệ thống}
+\input{Text/Design_system/kien_truc_he_thong}
+
+\newpage
+\subsection{Thiết kế cơ sở dữ liệu}
+\input{Text/Design_system/thiet_ke_database}
+
+
+
+\subsection{Thiết kế giao diện}
+% \input{Thiết kế hệ thống/thiet_ke_giao_dien}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newpage
+% \section{Kế hoạch luận văn}
+% \input{Text/ke_hoach_luan_van}
+%Lập bảng kế hoạch dựa trên GOM nhóm danh sách user story cho mỗi 2 tuần hiện thực
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Hiện thực hệ thống}
+\subsection{Công nghệ sử dụng}
+\input{Text/Implement_system/cong_nghe_su_dung}
+
+\subsection{Quản lí mã nguồn}
+\input{Text/Implement_system/quan_li_ma_nguon}
+
+
+\subsection{Kết quả hiện thực}
+\input{Text/Implement_system/ket_qua_hien_thuc}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Kế hoạch kiểm tra phần mềm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Tổng kết}
+\subsection{Kết quả đạt được}
+% \input{Text/Tong_ket/ket_qua_dat_duoc}
+
+\subsection{Hạn chế}
+% \input{Text/Tong_ket/han_che}
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\addcontentsline{toc}{section}{Tài liệu tham khảo}
+\begin{thebibliography}{80}
+
+\bibitem{Databse} Ramez Elmasri, Shamkant B. Navathe (2016), \textit{Fundamentals of Database Systems}, \textit{7th Edition}, Pearson.
+
+\bibitem{Postgre SQL, } Postgre SQL, https://www.postgresql.org/docs/13/index.html
+
+\bibitem{software} Ian Sommerville (2016), \textit{Software Engineering}, \textit{10th Edition}, Pearson.
+
+\bibitem{Java core} Java core, https://www.tutorialspoint.com/java/index.htm
+
+\bibitem{Java spring boot} Java spring boot, https://spring.io/projects/spring-boot
+
+\bibitem{Spring JDBC} Spring JDBC, https://www.baeldung.com/spring-jdbc-jdbctemplate
+
+\bibitem{Spring Lombok} Spring Lombok, https://www.baeldung.com/lombok-accessors
+
+\bibitem{Query DSL} Query DSL https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
+
+\bibitem{Send email} Send email, https://www.tutorialspoint.com/spring\_boot/spring\_boot\_sending\_email.htm
+
+\bibitem{Connect Postgre SQL} Connect Postgre SQL, https://www.baeldung.com/spring-boot-postgresql-docker
+
+\bibitem{Generate SHA-256 hash} Generate SHA-256 hash, https://www.baeldung.com/sha-256-hashing-java
+
+\bibitem{Generate token base64} Generate token base64, https://www.baeldung.com/java-base64-encode-and-decode
+
+\bibitem{} Material-UI: Apopular React UI framework, https://material-ui.com/. 
+
+\bibitem{} Exemplary real world application built with React + Redux, https://github.com/gothinkster/react-redux-realworld-example-app. 
+
+\end{thebibliography}
+\end{document}
+
