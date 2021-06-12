@@ -109,3 +109,63 @@ Khi sử dụng JPA, chúng ta có thế:
     \item Viết ít code hơn, nhưng vẫn có được performance tốt.
     \item Độc lập về database, không phải làm việc trực tiếp với các quan hệ.
 \end{itemize}
+
+\subsubsection{RESTful API}
+API (Application Programming Interface) là tập các quy tắc và cơ chế để một thành phần ứng dụng có thể tương tác với một thafnh phần ứng dụng khác. API có thể trả về dữ liệu ở những kiểu dữ liệu phổ biến như JSON hay XML cho ứng dụng.\par
+
+REST (REpresentational State Transfer) là một kiểu kiến trúc chuyển đổi cấu trúc dữ liệu cho API. REST sử dụng phương thức HTTP đơn giản cho giao tiếp giữa các thành phần ứng dụng. Thay vì sử dụng một URL cho việc xử lý một số thông tin người dùng, REST bao gồm các thao tác như GET, POST, DELETE,... đến một URL để xử lý dữ liệu.\par
+
+RESTful API là một tiêu chuẩn dùng trong việc thiết kế các API cho các ứng dụng. RESTful API được sử dụng phổ biến rộng rãi ngày nay cho web, mobile… vì tính tiện lợi và hiệu uqar của nó.\par
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=11.5cm]{Image/Technical/RESTful_API.png}
+        \caption{RESTful API}
+        \label{RESTfulAPI}
+    \end{center}
+\end{figure}
+
+REST hoạt động chủ yếu dựa vào giao thức HTTP chính sau:
+\begin{itemize}
+    \item GET (SELECT): Trả về một Resource hoặc danh sách Resource.
+    \item POST (CREATE): Tạo mới một Resource.
+    \item PUT (UPDATE): Cập nhật thông tin cho Resource.
+    \item DELETE (DELETE): Xoá một Resource.
+    \item PATCH: ghi đè các thông tin được thay đổi của đối tượng.
+\end{itemize}
+
+Ưu điểm của việc sử dụng RESTful API:
+\begin{itemize}
+    \item Code đơn giản và ngắn gọn giúp cho ứng dụng rõ ràng hơn
+    \item Dữ liệu được trả về với nhiều định dạng khác nhau như: xml, html, json….
+    \item REST URL đại diện cho resource chứ không phải hành động
+    \item REST chú trọng vào tài nguyên của hệ thống.
+\end{itemize}
+
+Tuy nhiên vẫn còn tồn tại một số nhược điểm:
+\begin{itemize}
+    \item RESTful API rất khó thiết kế vì REST là kiểu kiến trúc và không phải công nghệ. Nó không có tiêu chuẩn quản lý, do đó không có quy tắc thiết kế nhanh và bền vững.
+    \item Có rất nhiều thiết kế RESTful API khác nhau, khó đồng nhất.
+\end{itemize}
+
+\subsubsection{Token-Based Authentication}
+Token-Based Authentication (xác thực dựa trên token) là một giao thức cho phép người dùng xác minh danh tính của mình và nhận mã token xác thực duy nhất. Trong thời gian tồn tại của mã token, người dùng có thể truy cập trang web hoặc ứng dụng mà không cần phải nhập lại thông tin đăng nhập. Mã token xác thực hoạt động giống như một vé được đóng dấu. Người dùng vẫn có quyền truy cập miễn là mã token vẫn còn hợp lệ. Sau khi người dùng đăng xuất hoặc thoát khỏi một ứng dụng, mã token sẽ bị vô hiệu hóa.\par
+
+Xác thực dựa trên mã token khác với các kỹ thuật xác thực dựa trên mật khẩu hoặc dựa trên máy chủ truyền thống. Token cung cấp lớp bảo mật thứ hai và quản trị viên có quyền kiểm soát chi tiết đối với từng hành động và giao dịch.\par
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=12cm]{Image/Technical/token_auth.png}
+        \caption{Token-Based Authentication}
+        \label{TokenAuth}
+    \end{center}
+\end{figure}
+
+Quá trình hoạt động:
+\begin{itemize}
+    \item Request: Người dùng yêu cầu quyền truy cập vào máy chủ hoặc tài nguyên được bảo vệ. Điều đó có thể liên quan đến đăng nhập bằng mật khẩu hoặc có thể liên quan đến một số quy trình khác.
+    \item Verification: Máy chủ xác định rằng người đó phải có quyền truy cập. Điều đó có thể liên quan đến việc kiểm tra mật khẩu so với tên người dùng hoặc nó có thể liên quan đến một số quy trình khác.
+    \item Tokens: Máy chủ giao tiếp với thiết bị xác thực. Sau khi xác minh, máy chủ phát hành một mã token và chuyển nó cho người dùng.
+    \item Storage: Mã token nằm trong trình duyệt của người dùng trong khi công việc tiếp tục. Nếu người dùng cố gắng truy cập một phần khác của máy chủ, mã token sẽ giao tiếp lại với máy chủ để xác định quyền truy cập hoặc bị từ chối.
+\end{itemize}
+Quản trị viên đặt giới hạn cho mã token. Bạn có thể cho phép mã token dùng một lần bị hủy ngay lập tức khi người đó đăng xuất. Hoặc cũng có thể cho mã token tự hủy vào cuối một khoảng thời gian cụ thể.

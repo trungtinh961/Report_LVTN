@@ -48,14 +48,47 @@ cộng đồng như Redux, React Router, Redux Saga...
 React-Router là một thư viện định tuyến (routing) tiêu chuẩn trong React. Nó giữ cho giao diện của ứng dụng đồng bộ với URL trên trình duyệt. React-Router cho phép bạn định tuyến "luồng dữ liệu" (data flow) trong ứng dụng của bạn một cách rõ ràng. React Router giúp bạn định nghĩa ra các URL động, và lựa chọn Component phù hợp để hiển thị trên trình duyệt người dùng ứng với từng URL.\par
 Có ba thành phần chính trong React Router:
 \begin{itemize}
-    \item Router, như là BrowserRouter và HashRouter sử dụng History API có trong HTML5 để theo dõi lịch sử bộ định tuyến.
-    \item Route matchers, như là Route và Switch định nghĩa một ánh xạ (mapping) giữa một URL và một Component. Điều đó có nghĩa là khi người dùng truy cập theo một URL trên trình duyệt, một Component tương ứng sẽ được render trên giao diện.
-    \item Chuyển hướng, như là Link, NavLin>, và Redirect sử dụng để chuyển qua lại giữa các component.
+    \item Router: BrowserRouter và HashRouter sử dụng History API có trong HTML5 để theo dõi lịch sử bộ định tuyến.
+    \item Route matchers: Route và Switch định nghĩa một ánh xạ (mapping) giữa một URL và một Component. Điều đó có nghĩa là khi người dùng truy cập theo một URL trên trình duyệt, một Component tương ứng sẽ được render trên giao diện.
+    \item Chuyển hướng: Link, NavLink, và Redirect sử dụng để chuyển qua lại giữa các component.
 \end{itemize}
 
 \subsubsection{Quản lý state với kiến trúc Redux}
 
+Một ứng dụng React quản lí state trong các component riêng rẻ, để chia sẻ giữa các component với nhau ta phải truyền từ component cha xuống con hoặc sử dụng đến context và do đó nó chỉ phù hợp với các ứng dụng nhỏ, có ít state. Đối với các ứng dụng lớn có nhiều state thì việc sử dụng context sẽ rất khó phát triển và bảo trì. Redux ra đời giúp cho việc này trở nên đơn giản hơn bằng cách tạo ra Store để lưu trữ toàn bộ data và cùng một nơi và cung cấp nó cho toàn bộ các component trong ứng dụng. (Hình \ref{redux})\par
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=10cm]{Image/Technical/redux.png}
+        \caption{Quản lí state với Redux}
+        \label{redux}
+    \end{center}
+\end{figure}
+Các thành phần chính của Redux:
+\begin{itemize}
+    \item Store: là nơi lưu trữ của tất cả state trong ứng dụng, ta có thể truy cập vào để đọc, cập nhật và xóa các state thông qua các actions.
+    \item Action: là các sự kiện mà người dùng tạo ra khi tác động vào các view để làm thay đổi state.
+    \item Reducer: là một hàm nhận đầu vào là state và các mô tả về sự kiện và dựa vào đó để trả về state mới.
+\end{itemize}
+
+Cơ chế hoạt động của Redux (Hình \ref{redux-flow}):
+\begin{enumerate}
+    \item Ở component xảy ra một sự kiện nào đó của người dùng như nhấn vào một nút, nhấn vào phần tử, tạo hoặc xóa dữ liệu,...
+    \item Action nhận được sự kiện trên component và thực hiện tạo một action gồm có kiểu và dữ liệu.
+    \item Action này sẽ được gửi đến Reducer thông qua hàm dispatch(action), Reducer sẽ dựa và kiểu của action để lấy các dữ liệu ra tính toán và cập nhật lại dữ liệu của state đó.
+    \item Sau khi state này thay đổi, component chứa nó sẽ thực hiện rerender lại.
+\end{enumerate}
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=10cm]{Image/Technical/redux-flow.png}
+        \caption{Cơ chế hoạt động của Redux}
+        \label{redux-flow}
+    \end{center}
+\end{figure}
+
 \subsubsection{Tích hợp middleware sử dụng Redux Thunk}
 
-\subsubsection{Xây dựng UI nhanh chóng với Material-UI}
+
+
+\subsubsection{Xây dựng ứng dụng với Material-UI}
 
