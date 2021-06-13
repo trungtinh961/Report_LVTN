@@ -1,0 +1,42 @@
+Heroku là một Nền tảng đám mây dựa trên ứng dụng container dưới dạng dịch vụ (Container-based cloud Platform as a Service - PaaS). Các nhà phát triển sử dụng Heroku để triển khai, quản lý và mở rộng quy mô các ứng dụng. Nền tảng Heroku rất linh hoạt và dễ sử dụng, cung cấp cho các nhà phát triển con đường đơn giản nhất để đưa ứng dụng của họ ra thị trường.\par
+
+Heroku được quản lý chặc chẽ, cho phép các nhà phát triển tự do tập trung vào sản phẩm cốt lõi của họ mà không bị phân tâm trong việc bảo trì máy chủ, phần cứng hoặc cơ sở hạ tầng. Heroku cung cấp các dịch vụ, công cụ, quy trình làm việc và hỗ trợ đa ngôn ngữ - tất cả đều được thiết kế để nâng cao năng suất của nhà phát triển.\par
+
+\begin{figure}[!ht]
+    \begin{center}
+        \includegraphics[width=10cm]{Image/Technical/heroku.png}
+        \caption{Heroku}
+        \label{heroku}
+    \end{center}
+\end{figure}
+
+Đa số các ngôn ngữ mới nhất, frameworks và các tính năng ngôn ngữ khác được duy trì, vá lỗi và hỗ trợ đầy đủ trên Heroku. Các ngôn ngữ được hỗ trợ hiện tại là: Node, Java, Python, Scala, Ruby, PHP, Go, Clojure.\par
+
+Các tính năng Heroku cung cấp cho người dùng:
+\begin{itemize}
+    \item \textbf{Heroku Runtime}: cho phép úng dụng của chạy bên trong các smart container được quản lý hoàn toàn trong suốt thời gian chạy. Heroku xử lý mọi thứ quan trọng bao gồm: cấu hình, điều phối, cân bằng tải, chuyển đổi dự phòng, ghi nhật ký log, bảo mật,...
+    \item \textbf{Heroku Postgres (SQL)}: dịch vụ Quản trị cơ sở dữ liệu đáng tin cậy và an toàn với thiết lập dễ dàng, mã hóa nhanh gọn, mở rộng quy mô đơn giản, chuyển đổi cơ sở dữ liệu, bảo vệ liên tục.
+    \item \textbf{Heroku Redis}: hỗ trợ dịch vụ Redis cho lập trình viên sử dụng. Một trong những dịch vụ cache key-value trên bộ nhớ tốc độ nhanh phổ biến.
+    \item \textbf{Scale}: có thể mở rộng quy mô ứng dụng ngay lập tức, cả theo chiều dọc và chiều ngang, giúp điều hành mọi thứ một cách đơn giản từ các dự án nhỏ lẻ cho đến thương mại điện tử cấp doanh nghiệp.
+    \item \textbf{Add-ons}: mở rộng, nâng cao và quản lý các ứng dụng với các dịch vụ được tích hợp sẵn như New Relic, MongoDB, SendGrid, Searchify, ClearDB MySQL,...
+    \item \textbf{Code/data rollback}: cho phép bạn khôi phục mã nguồn hoặc cơ sở dữ liệu về trạng thái trước đó ngay lập tức.
+    \item \textbf{App metrics}: cập nhật những gì xảy ra với các ứng dụng nhờ vào tính năng giám sát tích hợp lưu lượng, thời gian phản hồi, bộ nhớ, tải CPU và lỗi.
+    \item \textbf{Continuous delivery}: Heroku Flow sử dụng Heroku Pipeline, Review Apps và Github tích hợp để xây dựng quy trình pipeline CI/CD gồm build, test, deploy,…
+    \item \textbf{GitHub Integration}: Tích hợp Github giúp pull request, push, commit,... hoạt động với mọi branch.
+\end{itemize}
+
+\noindent
+Heroku có những ưu điểm sau:
+\begin{itemize}
+    \item Database hoàn toàn miễn phí.
+    \item SSL sử dụng miễn phí.
+    \item Có khả năng hỗ trợ làm việc dành cho team.
+    \item Có thể liên kết với các loại Github đơn giản nhất.
+\end{itemize}
+
+\noindent
+Bên cạnh đó vẫn có một số nhược điểm còn tồn tại:
+\begin{itemize}
+    \item Heroku chỉ dành riêng cho người dùng sử dụng 550 giờ/tháng, phải trả tiền để có sử dụng đầy đủ hơn.
+    \item Trong khoản 2 đến 3 giờ nếu như server không được truy cập thì nó sẽ tự động chuyển sang trạng thái ngủ.
+\end{itemize}

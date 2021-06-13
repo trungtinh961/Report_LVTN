@@ -88,7 +88,10 @@ Cơ chế hoạt động của Redux (Hình \ref{redux-flow}):
 
 \subsubsection{Tích hợp middleware sử dụng Redux Thunk}
 
+Middleware là một lớp nằm giữa Reducer và Dispatch Actions, nó hoạt động sau khi một action được dispatch và trước khi reducer nhận được action này. Middleware trong redux được sử dụng nhiều nhất trong việc xử lí async action - những action không sẵn sàng khi người dùng dispatch, thông thường thì đây là các API request.\par
 
+Hiện nay, có khá nhiều thư viện Middleware cho redux như redux-thunk, redux-saga, redux-observable,... Mỗi thư viện có những phương pháp giải quyết vấn đề riêng, tuy nhiên do thời gian thực hiện luận văn có hạn nên nhóm chọn redux-thunk, thư viện được giới thiệu bởi redux và đơn giản khi hiện thực, làm middleware cho hệ thống của mình.
 
-\subsubsection{Xây dựng ứng dụng với Material-UI}
+\subsubsection{Xây dựng ứng dụng với framework Material-UI}
 
+Một ứng dụng ReactJS được xây dựng bằng việc kết hợp các component lại với nhau. Ta có thể xây dựng các component cho ứng dụng bằng cách viết các component sau đó chỉnh sửa CSS từng chút một cho nó. Hiện nay, có khá nhiều thư viện phổ biến cung cấp cho ta các component cơ bản để phát triển giao diện như Boostrap, Material-UI, Ant Design,... Mỗi thư viện trên có các thiết kế theo các chuẩn khác nhau, nhóm đã xem qua và chọn Material-UI vì sự phổ biến, thiết kế đẹp và dễ dàng tùy chỉnh lại các style component một cách dễ dàng.\par
