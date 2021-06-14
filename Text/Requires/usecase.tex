@@ -77,7 +77,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
         Use-case ID & 3\\ \hline
         Use-case name & Xem xưởng nhuộm.\\ \hline
         Actor & Nhân viên, quản trị viên.\\ \hline
-        Description & Nhân viên có thể xem danh sách các xưởng nhuộm, bao gồm mã xưởng, tên xưởng, tổng công nợ và tổng độ dài mộc tồn. Nhân viên nhấn vào tên xưởng để xem thông tin chi tiết về xưởng hoặc nhấn vào link trong cột Tổng độ dài mộc tồn để xem chi tiết về vải mộc tồn theo loại vải.\\ \hline
+        Description & Nhân viên có thể xem danh sách các xưởng nhuộm, bao gồm mã xưởng, tên xưởng, tổng công nợ và tổng độ dài mộc tồn. Nhân viên nhấn vào tên xưởng để xem thông tin chi tiết về xưởng.\\ \hline
         Preconditions & Người dùng đã đăng nhập vào hệ thống.\\ \hline
         Postconditions & Người dùng có thể xem các thông tin về xưởng nhuộm.\\ \hline
         Normal Flow & 
@@ -98,7 +98,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 
 \newpage
 \textbf{Chỉnh sửa thông tin xưởng nhuộm.}\par
-\textbf{User story:}  [\ref{bang4}]
+\textbf{User story:} Là người dùng của hệ thống, tôi có thể chỉnh sửa các thông tin cơ bản của một xưởng nhuộm. Khi nhấn vào nút chỉnh sửa thông tin trong trang chi tiết xưởng nhuộm, tôi có thể sửa địa chỉ, số điện thoại và email của xưởng này. Sau khi cập nhật xong, tôi sẽ thấy thông tin mới trong trang chi tiết xưởng nhuộm. [\ref{bang4}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -128,7 +128,8 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 \end{table}
 
 \newpage
-\textbf{Thanh toán}
+\textbf{Thanh toán}\par
+\textbf{User story:} Là người dùng của hệ thống, tôi có thể tạo hóa đơn thanh toán công nợ cho một xưởng nhuộm. Khi nhấn vào nút Tạo thanh toán trong trang chi tiết xưởng nhuộm, hoặc nhấn vào Tạo hóa đơn ở menu, tôi sẽ được chuyển qua trang tạo hóa đơn thanh toán.Ở đây, tôi nhập các thông tin gồm xưởng nhuộm, phương thức thanh toán, ngân hàng (nếu có), tổng số tiền, và nhân viên xác nhận thanh toán ở xưởng nhuộm. [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -140,7 +141,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
         Preconditions & Người dùng đã đăng nhập vào hệ thống.\\ \hline
         Postconditions & Xưởng nhuộm được thanh toán.\\ \hline
         Normal Flow & 
-        1. Trong trang chi tiết của xưởng nhuộm, nhấn vào nút "Tạo hóa đơn", màn hình Tạo thanh toán xuất hiện.\par
+        1. Trong trang chi tiết của xưởng nhuộm, nhấn vào nút "Tạo thanh toán", màn hình Tạo thanh toán xuất hiện.\par
         2. Chọn xưởng nhuộm, phương thức thanh toán, ngân hàng hoặc tên người nhận\par
         3. Nhập số tiền cần thanh toán\par
         4. Nhập tên nhân viên nhận.\par
@@ -159,7 +160,9 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
     \label{bang5}
 \end{table}
 
-\textbf{Xem đơn đặt hàng}
+\newpage
+\textbf{Xem đơn đặt hàng}\par
+\textbf{User story:} [\ref{bang6}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -188,6 +191,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 
 \newpage
 \textbf{Tạo đơn đặt hàng}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -216,6 +220,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 \end{table}
 
 \textbf{Xem vải mộc}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -241,6 +246,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 
 \newpage
 \textbf{Tạo phiếu xuất vải mộc}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -271,6 +277,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 \end{table}
 
 \textbf{Xem vải thành phẩm}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -296,6 +303,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 
 \newpage
 \textbf{Tạo phiếu nhập vải thành phẩm}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -327,6 +335,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 \end{table}
 
 \textbf{Xem hàng trả}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -351,6 +360,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 
 \newpage
 \textbf{Tạo phiếu hàng trả}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -380,6 +390,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 \end{table}
 
 \textbf{Dashboard}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -406,6 +417,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 
 \newpage
 \textbf{Tạo nhân viên mới}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -436,6 +448,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 \end{table}
 
 \textbf{Tạo xưởng nhuộm mới}
+\textbf{User story:} [\ref{bang5}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -465,6 +478,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
     \label{bang16}
 \end{table}
 
+% \textbf{User story:} [\ref{bang5}]
 % \begin{table}[!htp]
 %     \centering
 %     \begin{tabular}{|m{3cm}|m{10cm}|}
