@@ -12,7 +12,8 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 
 \newpage
 \subsubsection{Đặt tả Usecase}
-\textbf{Đăng nhập}
+\textbf{Đăng nhập}\par
+\textbf{User story:} Là một người dùng của hệ thống, tôi muốn mình có thể đăng nhập vào để sử dụng hệ thống. Thông tin đăng nhập gồm có email và mật khẩu. Nếu tôi chưa đăng nhập, và cố gắng truy cập vào các trang của hệ thống, hệ thống sẽ chuyển hướng về trang đăng nhập. Nếu như quá 30 phút mà tôi không có hành động gì với hệ thống, thì phiên đăng nhập hết hạn và khi đó tôi sẽ phải đăng nhập lại. [\ref{bang1}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -29,7 +30,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
         3. Bấm vào nút "Đăng nhập".
         \\ \hline
         Exception & 
-        3a. Người dùng nhập tài khoản hoặc email không chính xác.\par
+        3a. Người dùng nhập tài khoản không chính xác.\par
         3b. Người dùng nhập mật khẩu không chính xác
         \\ \hline
         Alternative flow & Không có\\ 
@@ -39,7 +40,8 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
     \label{bang1}
 \end{table}
 
-\textbf{Khôi phục mật khẩu}
+\textbf{Khôi phục mật khẩu}\par
+\textbf{User story:} Là một người dùng của hệ thống, tôi muốn có thể khôi phục lại mật khẩu của mình trong trường hợp quên mật khẩu hoặc muốn cập nhật mật khẩu mới. Khi yêu cầu khôi phục mật khẩu, tôi sẽ phải cung cấp email của mình, sau đó một email sẽ được hệ thống gửi đến chưa một đường dẫn, khi nhấn vào đường dẫn tôi sẽ được chuyển đến trang nhập mật khẩu mới. Thời gian hết hạn của đường dẫn trong mail trên là 5 phút, khi đó tôi phải thực hiện lại yêu cầu khôi phục mật khẩu. [\ref{bang2}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -66,7 +68,8 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 \end{table}
 
 \newpage
-\textbf{Xem xưởng nhuộm}
+\textbf{Xem xưởng nhuộm}\par
+\textbf{User story:} Là một người dùng của hệ thống, tôi có thể xem được danh sách các xưởng nhuộm đang làm việc với công ty mình. Thông tin mỗi xưởng nhuộm bao gồm Tên xưởng nhuộm, công nợ và số lượng vải mộc tồn kho ở xưởng. Khi nhấn vào một xưởng, tôi có thể xem thông tin chi tiết về xưởng nhuộm. Thông tin chi tiết của xưởng bao gồm: tên xưởng, địa chỉ, số điện thoại, email, công nợ, danh sách các đơn đặt hàng ở xưởng này. Ngoài ra, có thêm các nút chỉnh sửa thông tin, tạo đơn đặt hàng, tạo thanh toán và danh sách vải tồn, khi nhấn vào sẽ có các hành động tương ứng như tiêu đề. [\ref{bang3}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -93,7 +96,9 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
     \label{bang3}
 \end{table}
 
-\textbf{Chỉnh sửa thông tin xưởng nhuộm.}
+\newpage
+\textbf{Chỉnh sửa thông tin xưởng nhuộm.}\par
+\textbf{User story:}  [\ref{bang4}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
