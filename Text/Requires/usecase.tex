@@ -69,6 +69,97 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 \end{table}
 
 \newpage
+\textbf{Dashboard}\par
+\textbf{User story:} Là người dùng của hệ thống, tôi có thể xem một số thông tin thống kê về hoạt động của công ty gần đây. Sau khi đăng nhập thành công, tôi sẽ được chuyển đến trang Dashboard, ở đây tôi có thể xem thống kê về số lượng vải thành phẩm mà các xưởng nhuộm đã làm được trong vòng một năm qua, số tiền mà công ty đã thanh toán cho các xưởng nhuộm trong tuần qua, thống kế phần trăm lượng vải thành phẩm mà các xưởng đã làm cho công ty, các phiếu nhập và phiếu xuất gần đây của công ty. [\ref{bang14}]
+\begin{table}[!htp]
+    \centering
+    \begin{tabular}{|m{3cm}|m{10cm}|}
+    \hline 
+        Use-case ID & 14\\ \hline
+        Use-case name & Dashboard\\ \hline
+        Actor & Nhân viên, quản trị viên.\\ \hline
+        Description & Người dùng có thể xem các thông tin thống kê.\\ \hline
+        Preconditions & Người dùng đã đăng nhập vào hệ thống.\\ \hline
+        Postconditions & Người dùng xem các thông tin thống kê.\\ \hline
+        Normal Flow & 
+        1. Thống kê sản lượng trong năm gần đây của từng xưởng nhuộm.\par
+        2. Thống kê vải thành phẩm theo xưởng và Thống kê vải thành phẩm theo loại vải.\par
+        3. Danh sách phiếu nhập gần đây.\par
+        4. Danh sách phiếu xuất gần đây.
+        \\ \hline
+        Exception & Khống có.\\ \hline
+        Alternative flow & Không có.\\ 
+    \hline 
+    \end{tabular}
+    \caption{Dashboard}
+    \label{bang14}
+\end{table}
+
+\newpage
+\textbf{Tạo nhân viên mới}\par
+\textbf{User story:} Là người dùng của hệ thống, với vai trò là người quản trị hệ thống, tôi có thể tạo một nhân viên mới để truy cập vào hệ thống này. Khi nhấn vào Tạo nhân viên trên menu, tôi sẽ được chuyển sang trang tạo nhân viên mới. Ở đây, tôi cung cấp các thông tin họ, tên, email, mật khẩu, giới tính của nhân viên. Cuối cùng nhấn nút tạo nhân viên. Chức năng này không khả dụng nếu người dùng là nhân viên bình thường. [\ref{bang15}]
+\begin{table}[!htp]
+    \centering
+    \begin{tabular}{|m{3cm}|m{10cm}|}
+    \hline 
+        Use-case ID & 15\\ \hline
+        Use-case name & Tạo nhân viên mới\\ \hline
+        Actor & Quản trị viên.\\ \hline
+        Description & Quản trị viên có thể tạo nhân viên mới.\\ \hline
+        Preconditions & Quản trị viên đã đăng nhập vào hệ thống.\\ \hline
+        Postconditions & Nhân viên mới được tạo.\\ \hline
+        Normal Flow & 
+        1. Nhấn vào nút "Tạo nhân viên" trên thanh menu.\par 
+        2. Nhập họ tên nhân viên mới.\par
+        3. Nhập email.\par
+        4. Nhập mật khẩu.\par
+        5. Nhập giới tính.\par
+        6. Nhấn nút "Tạo".
+        \\ \hline
+        Exception & Không có.
+        \\ \hline
+        Alternative flow & 
+        6a. Nhấn nút "Hủy bỏ" để hủy tạo nhân viên.
+        \\ 
+    \hline 
+    \end{tabular}
+    \caption{Tạo nhân viên}
+    \label{bang15}
+\end{table}
+
+\newpage
+\textbf{Tạo xưởng nhuộm mới}\par
+\textbf{User story:} Là người dùng của hệ thống, với vai trò là người quản trị hệ thống, tôi có thể tạo một xưởng nhuộm mới. Khi nhấn vào Tạo xưởng nhuộm trên menu, tôi sẽ được chuyển sang trang tạo xưởng nhuộm mới. Ở đây, tôi cung cấp các thông tin tên xưởng, địa chỉ, điện thoại và email của xưởng. Cuối cùng nhấn nút Lưu lại. Chức năng này không khả dụng nếu người dùng là nhân viên bình thường. [\ref{bang16}]
+\begin{table}[!htp]
+    \centering
+    \begin{tabular}{|m{3cm}|m{10cm}|}
+    \hline 
+        Use-case ID & 16\\ \hline
+        Use-case name & Tạo xưởng nhuộm mới\\ \hline
+        Actor & Quản trị viên.\\ \hline
+        Description & Quản trị viên có thể tạo xưởng nhuộm mới.\\ \hline
+        Preconditions & Quản trị viên đã đăng nhập vào hệ thống.\\ \hline
+        Postconditions & Xưởng nhuộm mới được tạo.\\ \hline
+        Normal Flow & 
+        1. Nhấn vào nút "Tạo xưởng nhuộm" trên thanh menu.\par 
+        2. Nhập tên xưởng.\par
+        3. Nhập địa chỉ.\par
+        4. Nhập số điện thoại.\par
+        5. Nhập email.\par
+        6. Nhấn nút "Tạo".
+        \\ \hline
+        Exception & Không có.
+        \\ \hline
+        Alternative flow & 
+        6a. Nhấn nút "Hủy bỏ" để hủy tạo xưởng nhuộm.
+        \\ 
+    \hline 
+    \end{tabular}
+    \caption{Tạo xưởng nhuộm}
+    \label{bang16}
+\end{table}
+
+\newpage
 \textbf{Xem xưởng nhuộm}\par
 \textbf{User story:} Là một người dùng của hệ thống, tôi có thể xem được danh sách các xưởng nhuộm đang làm việc với công ty mình. Thông tin mỗi xưởng nhuộm bao gồm Tên xưởng nhuộm, công nợ và số lượng vải mộc tồn kho ở xưởng. Khi nhấn vào một xưởng, tôi có thể xem thông tin chi tiết về xưởng nhuộm. Thông tin chi tiết của xưởng bao gồm: tên xưởng, địa chỉ, số điện thoại, email, công nợ, danh sách các đơn đặt hàng ở xưởng này. Ngoài ra, có thêm các nút chỉnh sửa thông tin, tạo đơn đặt hàng, tạo thanh toán và danh sách vải tồn, khi nhấn vào sẽ có các hành động tương ứng như tiêu đề. [\ref{bang3}]
 \begin{table}[!htp]
@@ -220,8 +311,6 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
     \label{bang7}
 \end{table}
 
-
-\newpage
 \textbf{Xem vải mộc}\par
 \textbf{User story:} Là người dùng của hệ thống, tôi có thể xem được danh sách số vải mộc tồn ở kho của công ty và ở từng xưởng nhuộm theo từng loại vải. [\ref{bang8}]
 \begin{table}[!htp]
@@ -247,6 +336,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
     \label{bang8}
 \end{table}
 
+\newpage
 \textbf{Tạo phiếu xuất vải mộc}\par
 \textbf{User story:} Là người dùng của hệ thống, tôi có thể tạo phiếu xuất vải mộc cho các xưởng. Khi nhấn vào Tạo phiếu xuất ở menu, tôi sẽ được chuyển đến trang tạo phiếu xuất. Để tạo được phiếu, tôi phải nhập thông tin xưởng nhuộm và chọn loại vải, sau đó sẽ có một danh sách các cây vải của loại vải này sẽ được tải về, và cuối cùng tôi sẽ chọn danh sách cây vải nào cần xuất. [\ref{bang9}]
 \begin{table}[!htp]
@@ -306,7 +396,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 
 \newpage
 \textbf{Tạo phiếu nhập vải thành phẩm}\par
-\textbf{User story:}  [\ref{bang11}]
+\textbf{User story:} Là người dùng của hệ thống, tôi có thể tạo phiếu nhập vải thành phẩm từ xưởng nhuộm gửi về. Khi nhấn vào Tạo phiếu nhập trong menu, tôi sẽ được chuyển đến trang tạo vải thành phẩm. Ở đây, tôi cung cấp các thông tin gồm tài xế giao hàng, xưởng nhuộm, loại vải, màu và đơn đặt hàng. Bước tiếp theo, tôi sẽ nhập danh sách các cây vải thành phẩm, thông tin một cây vải bao gồm mã cây vải và độ dài thành phẩm. Cuối cùng nhấn nút Tạo phiếu. [\ref{bang11}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -321,9 +411,9 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
         1. Nhấn vào nút "Tạo phiếu nhập" trên thanh menu, trang tạo phiếu nhập sẽ xuất hiện.\par
         2. Nhập xưởng nhuộm, loại vải, màu cho lô nhuộm.\par
         3. Nhập mã đơn đặt hàng tương ứng.\par
-        4. Nhấn nút "Tiếp theo".\par
-        5. Nhập tên người giao hàng.\par
-        6.  Nhập lần lượt mã cây vải và độ dài thành phẩm, sau đó nhấn nút "Thêm" để thêm cây vải vào lô nhuộm, danh sách cây vải của lô được hiển thị ra màn hình.\par
+        4. Nhập tên người giao hàng.\par
+        5. Nhấn nút "Tiếp theo".\par
+        6. Nhập lần lượt mã cây vải và độ dài thành phẩm, sau đó nhấn nút "Thêm" để thêm cây vải vào lô nhuộm, danh sách cây vải của lô được hiển thị ra màn hình.\par
         4. Kiểm tra thông tin, nhấn nút "Tạo phiếu" để hoàn thành.
         \\ \hline
         Exception & Không có.
@@ -337,8 +427,9 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
     \label{bang11}
 \end{table}
 
+\newpage
 \textbf{Xem hàng trả}\par
-\textbf{User story:} [\ref{bang12}]
+\textbf{User story:} Là người dùng của hệ thống, tôi có thể xem danh sách các phiếu hàng trả. Mỗi hàng trong danh sách này là một phiếu, bao gồm các thông tin xưởng nhuộm, tổng tiền, ngày tạo, và nhân viên tạo. Khi nhấn vào một hàng, tôi sẽ xem được thông tin chi tiết. Thông tin chi tiết của phiếu bao gồm các thông tin bên ngoài và có thêm danh sách các cây vải, thông tin trong một cây vải bao gồm mã cây vải, màu, loại, độ dài thành phẩm, độ dài trả, thành tiền và lí do trả hàng. Cuối cùng là tổng hợp lại tổng số cây, tổng độ dài trả và tổng tiền. [\ref{bang12}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -346,7 +437,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
         Use-case ID & 12\\ \hline
         Use-case name & Xem hàng trả\\ \hline
         Actor & Nhân viên, quản trị viên.\\ \hline
-        Description & Người dùng có thể xem danh sách phiếu hàng trả. Mỗi phiếu hàng trả có thể có nhiều hàng trả. Người dùng có thể xem thông tin chi tiết của phiếu hàng trả bằng, bao gồm danh sách hàng trả của phiếu.\\ \hline
+        Description & Người dùng có thể xem danh sách phiếu hàng trả. Mỗi phiếu hàng trả có thể có nhiều hàng trả. Người dùng có thể xem thông tin chi tiết của phiếu hàng trả bao gồm danh sách hàng trả của phiếu.\\ \hline
         Preconditions & Người dùng đã đăng nhập vào hệ thống.\\ \hline
         Postconditions & Người dùng xem được thông tin của phiếu hàng trả và danh sách hàng trả của phiếu hàng trả.\\ \hline
         Normal Flow & 
@@ -363,7 +454,7 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
 
 \newpage
 \textbf{Tạo phiếu hàng trả}\par
-\textbf{User story:} [\ref{bang13}]
+\textbf{User story:} Là người dùng của hệ thống, tôi có thể tạo phiếu hàng trả cho các xưởng. Khi nhấn vào Tạo phiếu hàng trả ở menu, tôi sẽ được chuyển sang trang tạo hàng trả. Ở đây, tôi nhập các thông tin gồm Nhân viên nhận, xưởng nhuộm. Sau đó nhập thông tin cho từng cây hàng trả, bao gồm: mã cây vải, độ dài trả và mô tả lỗi. Sau khi nhập xong thông tin của các cây vải, nhấn nút Tạo phiếu để tạo. [\ref{bang13}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
@@ -392,93 +483,54 @@ Các chức năng được đặc tả trong sơ đồ Usecase như Hình \ref{u
     \label{bang13}
 \end{table}
 
-\textbf{Dashboard}\par
-\textbf{User story:} [\ref{bang14}]
+% \newpage
+\textbf{Danh sách công nợ}\par
+\textbf{User story:} Là người dùng của hệ thống, tôi có thể xem được danh sách công nợ của các xưởng nhuộm. Mỗi hàng trong danh sách này là một xưởng nhuộm, số tiền nợ, và nút Thanh toán. Khi nhấn nút Thanh toán tôi sẽ được chuyển qua trang tạo thanh toán cho xưởng tương ứng. [\ref{bang17}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
     \hline 
-        Use-case ID & 14\\ \hline
-        Use-case name & Dashboard\\ \hline
+        Use-case ID & 17\\ \hline
+        Use-case name & Danh sách công nợ\\ \hline
         Actor & Nhân viên, quản trị viên.\\ \hline
-        Description & Người dùng có thể xem các thông tin thống kê.\\ \hline
+        Description & Xem danh sách công nợ của các xưởng nhuộm.\\ \hline
         Preconditions & Người dùng đã đăng nhập vào hệ thống.\\ \hline
-        Postconditions & Người dùng xem các thông tin thống kê.\\ \hline
+        Postconditions & Người dùng có thể xem các thông tin về công nợ.\\ \hline
         Normal Flow & 
-        1. Thống kê sản lượng trong năm gần đây của từng xưởng nhuộm.\par
-        2. Thống kê vải thành phẩm theo xưởng và Thống kê vải thành phẩm theo loại vải.\par
-        3. Danh sách phiếu nhập gần đây.\par
-        4. Danh sách phiếu xuất gần đây.
+        1. Nhấn vào nút "Danh sách công nợ" trên thanh menu, danh sách công nợ xuất hiện.
         \\ \hline
-        Exception & Khống có.\\ \hline
-        Alternative flow & Không có.\\ 
+        Exception & Không có\\ \hline
+        Alternative flow & Không có\\ 
     \hline 
     \end{tabular}
-    \caption{Dashboard}
-    \label{bang14}
+    \caption{Danh sách công nợ}
+    \label{bang17}
 \end{table}
 
 \newpage
-\textbf{Tạo nhân viên mới}\par
-\textbf{User story:} [\ref{bang15}]
+\textbf{Danh sách hoá đơn thanh toán}\par
+\textbf{User story:} Là người dùng của hệ thống, tôi có thể xem được danh sách hoá đơn đã thanh toán cho các xưởng nhuộm. Mỗi hàng trong danh sách này là một hoá đơn bao gồm các thông tin xưởng nhuộm, số tiền, phương thức thanh toán, ngân hàng, ngày tạo, nhân viên tạo, nhân viên nhận. [\ref{bang18}]
 \begin{table}[!htp]
     \centering
     \begin{tabular}{|m{3cm}|m{10cm}|}
     \hline 
-        Use-case ID & 15\\ \hline
-        Use-case name & Tạo nhân viên mới\\ \hline
-        Actor & Quản trị viên.\\ \hline
-        Description & Quản trị viên có thể tạo nhân viên mới.\\ \hline
-        Preconditions & Quản trị viên đã đăng nhập vào hệ thống.\\ \hline
-        Postconditions & Nhân viên mới được tạo.\\ \hline
+        Use-case ID & 18\\ \hline
+        Use-case name & Danh sách hoá đơn thanh toán\\ \hline
+        Actor & Nhân viên, quản trị viên.\\ \hline
+        Description & Xem danh sách hoá đơn thanh toán của các xưởng nhuộm.\\ \hline
+        Preconditions & Người dùng đã đăng nhập vào hệ thống.\\ \hline
+        Postconditions & Người dùng có thể xem các thông tin về hoá đơn thanh toán.\\ \hline
         Normal Flow & 
-        1. Nhấn vào nút "Tạo nhân viên" trên thanh menu.\par 
-        2. Nhập họ tên nhân viên mới.\par
-        3. Nhập email.\par
-        4. Nhập mật khẩu.\par
-        5. Nhập giới tính.\par
-        6. Nhấn nút "Tạo".
+        1. Nhấn vào nút "Danh sách hoá đơn" trên thanh menu, danh sách hoá đơn xuất hiện.\par
+        2. Nhấn vào tiêu đề trên mỗi cột để sắp xếp.\par
+        3. Sử dụng bộ lọc để lọc thông tin.
         \\ \hline
-        Exception & Không có.
-        \\ \hline
-        Alternative flow & 
-        6a. Nhấn nút "Hủy bỏ" để hủy tạo nhân viên.
-        \\ 
+        Exception & Không có\\ \hline
+        Alternative flow & Không có\\ 
     \hline 
     \end{tabular}
-    \caption{Tạo nhân viên}
-    \label{bang15}
-\end{table}
-
-\textbf{Tạo xưởng nhuộm mới}\par
-\textbf{User story:} [\ref{bang16}]
-\begin{table}[!htp]
-    \centering
-    \begin{tabular}{|m{3cm}|m{10cm}|}
-    \hline 
-        Use-case ID & 16\\ \hline
-        Use-case name & Tạo xưởng nhuộm mới\\ \hline
-        Actor & Quản trị viên.\\ \hline
-        Description & Quản trị viên có thể tạo xưởng nhuộm mới.\\ \hline
-        Preconditions & Quản trị viên đã đăng nhập vào hệ thống.\\ \hline
-        Postconditions & Xưởng nhuộm mới được tạo.\\ \hline
-        Normal Flow & 
-        1. Nhấn vào nút "Tạo xưởng nhuộm" trên thanh menu.\par 
-        2. Nhập tên xưởng.\par
-        3. Nhập địa chỉ.\par
-        4. Nhập số điện thoại.\par
-        5. Nhập email.\par
-        6. Nhấn nút "Tạo".
-        \\ \hline
-        Exception & Không có.
-        \\ \hline
-        Alternative flow & 
-        6a. Nhấn nút "Hủy bỏ" để hủy tạo xưởng nhuộm.
-        \\ 
-    \hline 
-    \end{tabular}
-    \caption{Tạo xưởng nhuộm}
-    \label{bang16}
+    \caption{Danh sách hoá đơn thanh toán}
+    \label{bang18}
 \end{table}
 
 % \textbf{User story:} [\ref{bang5}]
