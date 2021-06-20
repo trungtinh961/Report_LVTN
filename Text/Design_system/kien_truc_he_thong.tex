@@ -1,6 +1,6 @@
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=14cm]{Image/architecture.png}
+        \includegraphics[width=14cm]{Image/Technical/architecture.png}
         \caption{Kiến trúc hệ thống}
         \label{architecture}
     \end{center}
@@ -8,7 +8,12 @@
 
 Kiến trúc của hệ thống được thiết kế đơn giản như Hình \ref{architecture} bao gồm các thành phần sau:
 \subsubsection{Website (front-end)}
-@@@@@@@@@@@@@@@@@  Tinh will workaround  @@@@@@@@@@@@@@@@@\par
+\begin{itemize}
+    \item Component: chứa các view hiển thị cho người dùng.
+    \item Action: nhận các sự kiện mà người dùng thực hiện.
+    \item Middlewares và Reducer xử lí các sự kiện của người dùng, các dữ liệu từ server trả về để tính toán trả về state mới.
+    \item Store: lưu tất cả state của ứng dụng.
+\end{itemize}
 \subsubsection{Server (back-end)}
 \begin{itemize}
     \item \textbf{Controller}: nhận request trực tiếp từ người dùng, request đi vào controller sẽ đi qua ba bước (có thể có ngoại lệ) cơ bản bao gồm:

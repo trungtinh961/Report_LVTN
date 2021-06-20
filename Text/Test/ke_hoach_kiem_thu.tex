@@ -4,7 +4,8 @@ Kiểm thử phần mềm sẽ giúp đảm bảo hoàn thiện chức năng c�
 Ngoài ra, Kiểm thử phần mềm xác nhận rằng hệ thống đáp ứng các yêu cầu khác nhau bao gồm: hiệu suất, độ tin cậy, an toàn, khả năng ứng dụng,... Việc xác nhận này được thực hiện để đảm bảo rằng nhóm đang xây dựng hệ thống phù hợp.
 
 \subsubsection{Phạm vi}
-\textbf{Kiểm thử chức năng}
+Kiểm tra các chức năng của hệ thống, đảm bảo hệ thống hoạt động đúng như các yêu cầu đặc ra trong mô tả.
+
 \begin{itemize}
     \item Đối với người dùng
     \begin{itemize}
@@ -53,13 +54,10 @@ Ngoài ra, Kiểm thử phần mềm xác nhận rằng hệ thống đáp ứng
     \end{itemize}
 \end{itemize}
 
-
-\textbf{Kiểm thử phi chức năng}: Kiểm tra tốc độ phản hồi của hệ thống.
-
 \subsubsection{Phương pháp kiểm thử}
 \begin{itemize}
-    \item \textbf{Kiểm thử chức năng của hệ thống}: .................................................
-    \item \textbf{Kiểm thử yêu cầu phi chức năng của hệ thống}: Thực hiện lưu thời gian ngay tại thời điểm server nhận request từ người dùng. In ra thời gian đã thực hiện xong tác vụ tại thời điểm tác vụ được thực hiện hoàn tất.
+    \item \textbf{Về phía back-end}: thành phần giao tiếp quan trọng giữa back-end và front-end của hệ thống là thông qua các API. Do đó, trước khi hiện thực các chức năng trên front-end, nhóm đã tiến hành test các API này bằng ứng dụng Postman.
+    \item \textbf{Về phía front-end}: kiểm tra giao diện phù hợp với các chức năng của hệ thống, nhập sai các trường để kiểm tra validate từ phía front-end cũng như các error phản hồi từ server.
 \end{itemize}
 
 \subsubsection{Môi trường kiểm thử}
