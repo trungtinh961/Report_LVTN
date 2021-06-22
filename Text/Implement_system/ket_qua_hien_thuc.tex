@@ -17,7 +17,36 @@ Token được lưu trữ ở Local Storage, việc lưu trữ nằm nhằm mụ
     \end{center}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Quên mật khẩu}
 
+Người dùng quên mật khẩu, có thể yêu cầu cập nhật mật khẩu mới bằng cách nhấn vào dòng chứ "Quên mật khẩu" phía dưới nút Đăng nhập, khi này sẽ được chuyển sang trang Nhập Email. [\ref{result_quen_mat_khau_email}]\par
+Khi người dùng nhập xong và nhấn nút Gửi, một email sẽ được gửi đi, trong email sẽ có một đường dẫn để dẫn đến trang cập nhật mật khẩu mới [\ref{result_quen_mat_khau_email_receive}]. Trong đường dẫn này, nhóm có chèn một token vào, token này dùng để định dạng người dùng nào đang yêu cầu, và sẽ được gửi lên server cùng với mật khẩu mới. Token có thời hạn là 5 phút, sau khi hết hạn, nếu người dùng truy cập vào đường dẫn này thì sẽ được chuyển sang trang Đăng nhập, lúc này cần phải thực hiện lại yêu cầu cập nhật mật khẩu.\par
+Cuối cùng, người dùng nhập mật khẩu mới của mình vào để cập nhật. [\ref{result_quen_mat_khau_new_password}]
+
+\begin{figure}[H]
+    \begin{center}
+        \frame{\includegraphics[width=12cm]{Image/result/quen_mat_khau_email.png}}
+        \caption{Giao diện trang Quên mật khẩu}
+        \label{result_quen_mat_khau_email}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \frame{\includegraphics[width=12cm]{Image/result/quen_mat_khau_gmail.png}}
+        \caption{Email người dùng nhận được}
+        \label{result_quen_mat_khau_email_receive}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \frame{\includegraphics[width=12cm]{Image/result/quen_mat_khau_new_password}}
+        \caption{Giao diện trang Nhập mật khẩu mới}
+        \label{result_quen_mat_khau_new_password}
+    \end{center}
+\end{figure}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%
 % \textbf{}
