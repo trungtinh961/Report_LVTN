@@ -7,7 +7,7 @@ Phần sau đây nhóm sẽ trình bày về giao diện ứng dụng mà nhóm 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Trang đăng nhập}
 
-Sau khi được Quản trị hệ thống cung cấp tài khoản, người dùng có thể đăng nhập vào hệ thống ở trang Đăng nhập [\ref{result_dang_nhap}]. Sau khi đăng nhập thành công, tài khoản này sẽ được server cung cấp một token để thực hiện các yêu cầu API xuyên suốt trong quá trình xử dụng ứng dụng. Token sẽ hết hạn nếu như sau 30 phút không có bất cứ yêu cầu nào lên server, khi này người dùng cần đăng nhập lại để tiếp tục sử dụng.\par
+Sau khi được Quản trị hệ thống cung cấp tài khoản, người dùng có thể đăng nhập vào hệ thống ở trang Đăng nhập [Hình \ref{result_dang_nhap}]. Sau khi đăng nhập thành công, tài khoản này sẽ được server cung cấp một token để thực hiện các yêu cầu API xuyên suốt trong quá trình xử dụng ứng dụng. Token sẽ hết hạn nếu như sau 30 phút không có bất cứ yêu cầu nào lên server, khi này người dùng cần đăng nhập lại để tiếp tục sử dụng.\par
 Token được lưu trữ ở Local Storage, việc lưu trữ nằm nhằm mục đích khi người dùng tải lại trang, tất cả state của hệ thống sẽ bị xóa, khi này sẽ lấy token đã lưu để lấy lại thông tin mà không yêu cầu người dùng phải đăng nhập lại.
 \begin{figure}[H]
     \begin{center}
@@ -20,9 +20,9 @@ Token được lưu trữ ở Local Storage, việc lưu trữ nằm nhằm mụ
 %%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Quên mật khẩu}
 
-Người dùng quên mật khẩu, có thể yêu cầu cập nhật mật khẩu mới bằng cách nhấn vào dòng chứ "Quên mật khẩu" phía dưới nút Đăng nhập, khi này sẽ được chuyển sang trang Nhập Email. [\ref{result_quen_mat_khau_email}]\par
-Khi người dùng nhập xong và nhấn nút Gửi, một email sẽ được gửi đi, trong email sẽ có một đường dẫn để dẫn đến trang cập nhật mật khẩu mới [\ref{result_quen_mat_khau_email_receive}]. Trong đường dẫn này, nhóm có chèn một token vào, token này dùng để định dạng người dùng nào đang yêu cầu, và sẽ được gửi lên server cùng với mật khẩu mới. Token có thời hạn là 5 phút, sau khi hết hạn, nếu người dùng truy cập vào đường dẫn này thì sẽ được chuyển sang trang Đăng nhập, lúc này cần phải thực hiện lại yêu cầu cập nhật mật khẩu.\par
-Cuối cùng, người dùng nhập mật khẩu mới của mình vào để cập nhật. [\ref{result_quen_mat_khau_new_password}]
+Người dùng quên mật khẩu, có thể yêu cầu cập nhật mật khẩu mới bằng cách nhấn vào dòng chứ "Quên mật khẩu" phía dưới nút Đăng nhập, khi này sẽ được chuyển sang trang Nhập Email. [Hình \ref{result_quen_mat_khau_email}]\par
+Khi người dùng nhập xong và nhấn nút Gửi, một email sẽ được gửi đi, trong email sẽ có một đường dẫn để dẫn đến trang cập nhật mật khẩu mới [Hình \ref{result_quen_mat_khau_email_receive}]. Trong đường dẫn này, nhóm có chèn một token vào, token này dùng để định dạng người dùng nào đang yêu cầu, và sẽ được gửi lên server cùng với mật khẩu mới. Token có thời hạn là 5 phút, sau khi hết hạn, nếu người dùng truy cập vào đường dẫn này thì sẽ được chuyển sang trang Đăng nhập, lúc này cần phải thực hiện lại yêu cầu cập nhật mật khẩu.\par
+Cuối cùng, người dùng nhập mật khẩu mới của mình vào để cập nhật. [Hình \ref{result_quen_mat_khau_new_password}]
 
 \begin{figure}[H]
     \begin{center}
