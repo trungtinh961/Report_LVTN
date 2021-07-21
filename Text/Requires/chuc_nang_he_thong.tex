@@ -1,46 +1,62 @@
-Xây dựng một hệ thống quản lý quá trình gia công nhuộm cho một doanh nghiệp vải sợ trên nền web, đáp ứng được những chức năng cơ bản để quản lý, đồng thời đảm bảo việc quản lý người dùng của quản trị viên.
+\subsubsection{Tổng quan}
+\input{Text/Requires/tong_quan}
+
 \subsubsection{Đối với người dùng là nhân viên}
 \begin{itemize}
-    \item Quản lí tài khoản cá nhân.
+    \item Quản lí tài khoản cá nhân
     \begin{itemize}
-        \item Đăng nhập.
-        \item Đăng xuất.
-        \item Khôi phục mật khẩu.
+        \item Đăng nhập
+        \item Đăng xuất
+        \item Khôi phục mật khẩu
     \end{itemize}
-    \item Quản lí xưởng nhuộm.
+    \item Thống kê hoạt động của doanh nghiệp: 
+    Bao gồm các biểu đồ và bảng số liệu thống kê các hoạt động gần đây của doanh nghiệp. Dựa vào các thông tin này doanh nghiệp có được cái nhìn tổng quan, cũng như thấy được hiệu quả hoạt động của các xưởng nhuộm đang liên kết với doanh nghiệp.
+    \item Quản lí xưởng nhuộm
     \begin{itemize}
-        \item Xem danh sách các xưởng, tìm kiếm và lọc các xưởng.
+        \item Xem danh sách các xưởng, tìm kiếm và lọc các xưởng
         \item Xem thông tin chi tiết của xưởng
-        \item Chỉnh sửa thông tin cơ bản của xưởng.
-        \item Xem công nợ của xưởng.
-        \item Tạo thanh toán cho xưởng.
+        \item Chỉnh sửa thông tin cơ bản của xưởng
+        \item Xem công nợ của xưởng
+        \item Xem các đơn đặt hàng của xưởng
     \end{itemize}
-    \item Quản lí đơn đặt hàng.
+    \item Quản lí đơn đặt hàng
     \begin{itemize}
-        \item Tạo đơn đặt hàng từ trang chủ hoặc từ xưởng cụ thể.
-        \item Xem danh sách đơn đặt hàng từ trang chủ hoặc từ xưởng cụ thế, có thể lọc và sắp xếp danh sách.
-        \item Xem thông tin chi tiết của đơn đặt hàng.
+        \item Tạo đơn đặt hàng từ trang chủ hoặc từ xưởng cụ thể
+        \item Xem danh sách đơn đặt hàng từ trang chủ hoặc từ xưởng cụ thế, có thể lọc và sắp xếp danh sách
+        \item Xem thông tin chi tiết của đơn đặt hàng
+        \item Cập nhật trạng thái đơn đặt hàng
     \end{itemize}
-    \item Quản lí vải mộc.
+    \item Quản lí vải mộc
     \begin{itemize}
-        \item Xuất vải mộc cho các xưởng.
-        \item Xem số lượng vải mộc tồn ở kho và các xưởng.
+        \item Tạo phiếu xuất vải mộc cho các xưởng
+        \item Xem số lượng vải mộc tồn ở kho và các xưởng
     \end{itemize}
-    \item Quản lí vải thành phẩm.
+    \item Quản lí vải thành phẩm
     \begin{itemize}
-        \item Nhập vải thành phẩm từ xưởng nhuộm.
-        \item Xem danh sách lô nhuộm, có thể lọc theo lô, theo loại vải và theo màu sắc.
-        % \item Xem thông tin chi tiết của từng lô nhuộm.
+        \item Tạo phiếu nhập vải thành phẩm từ xưởng nhuộm
+        \item Xem danh sách các phiếu nhập, có thể lọc và sắp xếp các phiếu nhập
+        \item Xem thông tin chi tiết của từng phiếu nhập
     \end{itemize}
-    \item Quản lí hàng trả.
+    \item Quản lí hàng trả
     \begin{itemize}
-        \item Xem danh sách phiếu hàng trả.
-        \item Xem chi tiết phiếu hàng trả.
-        \item Tạo phiếu hàng trả.
+        \item Xem danh sách phiếu hàng trả
+        \item Xem chi tiết phiếu hàng trả
+        \item Tạo phiếu hàng trả
+    \end{itemize}
+    \item Quản lí công nợ
+    \begin{itemize}
+        \item Xem danh sách công nợ của các xưởng
+        \item Tạo hoá đơn thanh toán cho xưởng 
+        \item Xem danh sách các hoá đơn thanh toán
+        \item Tính toán công nợ dựa vào các lần nhập vải thành phẩm và trả các cây vải lỗi
     \end{itemize}
 \end{itemize}
-\subsubsection{Đối với người dùng là quản trị viên}
+\subsubsection{Đối với người dùng là quản lí}
 \begin{itemize}
-    \item Tạo mới tài khoản cho nhân viên.
-    \item Tạo mới xưởng nhuộm.
+    \item Tất cả các chức năng của nhân viên
+    \item Xem danh sách các nhân viên
+    \item Tạo mới tài khoản cho nhân viên
+    \item Tạo mới xưởng nhuộm
+    % \item Tạo mới loại vải
+    % \item Cập nhật giá nhuộm của các xưởng nhuộm
 \end{itemize}

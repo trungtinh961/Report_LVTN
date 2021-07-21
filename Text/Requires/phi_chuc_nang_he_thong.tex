@@ -1,16 +1,16 @@
 \begin{itemize}
     \item Bảo mật.
     \begin{itemize}
-        \item Phân quyền đăng nhập, truy cập hệ thống: người dùng - quản trị viên.
+        \item Phân quyền đăng nhập, truy cập hệ thống: nhân viên - quản lí.
         \item Sử dụng thuật toán băm bảo mật SHA-256 để lưu trữ mật khẩu.
-        \item Các mức Create, Read, Update, and Delete (CRUD).
-        \item Kiểm tra persistent bằng hash token.
-        \item Giới hạn thời gian giữ phiên đăng nhập hệ thống.
+        \item Sử dụng các phương thức Create, Read, Update, and Delete (CRUD) phù hợp trong việc hiện thực các request API.
+        \item Xác thực người dùng bằng Json Web Token (JWT).
+        \item Giới hạn thời gian giữ phiên đăng nhập vào hệ thống.
     \end{itemize}
     \item Hiệu năng.
     \begin{itemize}
-        \item Thời gian tải trang, làm mới trình duyệt không vượt quá 5 giây.
-        \item Thời gian xử lý - chức năng, tính toán không vượt quá 2 giây.
+        \item Giảm thiểu tối đa thời gian tải trang, làm mới trình duyệt bằng cách sử dụng Single Page Application hiện thực giao diện ở frontend và với các API có kết quả nhiều sẽ hiện thực theo dạng phân trang.
+        \item Giảm thiểu thời gian xử lý các chức năng, tính toán bằng cách áp dụng các thuật toán đã được học.
     \end{itemize}
     \item UI/UX
     \begin{itemize}

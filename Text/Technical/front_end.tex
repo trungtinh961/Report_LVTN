@@ -45,7 +45,7 @@ cộng đồng như Redux, React Router, Redux Saga...
 \end{itemize}
 
 \subsubsection{Quản lý router với React Router}
-React-Router là một thư viện định tuyến (routing) tiêu chuẩn trong React. Nó giữ cho giao diện của ứng dụng đồng bộ với URL trên trình duyệt. React-Router cho phép bạn định tuyến "luồng dữ liệu" (data flow) trong ứng dụng của bạn một cách rõ ràng. React Router giúp bạn định nghĩa ra các URL động, và lựa chọn Component phù hợp để hiển thị trên trình duyệt người dùng ứng với từng URL.\par
+React-Router \cite{router_react, react_router} là một thư viện định tuyến (routing) tiêu chuẩn trong React. Nó giữ cho giao diện của ứng dụng đồng bộ với URL trên trình duyệt. React-Router cho phép bạn định tuyến "luồng dữ liệu" (data flow) trong ứng dụng của bạn một cách rõ ràng. React Router giúp bạn định nghĩa ra các URL động, và lựa chọn Component phù hợp để hiển thị trên trình duyệt người dùng ứng với từng URL.\par
 Có ba thành phần chính trong React Router:
 \begin{itemize}
     \item Router: BrowserRouter và HashRouter sử dụng History API có trong HTML5 để theo dõi lịch sử bộ định tuyến.
@@ -55,7 +55,7 @@ Có ba thành phần chính trong React Router:
 
 \subsubsection{Quản lý state với kiến trúc Redux}
 
-Một ứng dụng React quản lí state trong các component riêng rẻ, để chia sẻ giữa các component với nhau ta phải truyền từ component cha xuống con hoặc sử dụng đến context và do đó nó chỉ phù hợp với các ứng dụng nhỏ, có ít state. Đối với các ứng dụng lớn có nhiều state thì việc sử dụng context sẽ rất khó phát triển và bảo trì. Redux ra đời giúp cho việc này trở nên đơn giản hơn bằng cách tạo ra Store để lưu trữ toàn bộ data và cùng một nơi và cung cấp nó cho toàn bộ các component trong ứng dụng. (Hình \ref{redux})\par
+Một ứng dụng React quản lí state trong các component riêng rẻ, để chia sẻ giữa các component với nhau ta phải truyền từ component cha xuống con hoặc sử dụng đến context và do đó nó chỉ phù hợp với các ứng dụng nhỏ, có ít state. Đối với các ứng dụng lớn có nhiều state thì việc sử dụng context sẽ rất khó phát triển và bảo trì. Redux \cite{redux_state} ra đời giúp cho việc này trở nên đơn giản hơn bằng cách tạo ra Store để lưu trữ toàn bộ data và cùng một nơi và cung cấp nó cho toàn bộ các component trong ứng dụng. [Hình \ref{redux}]\par
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=12cm]{Image/Technical/redux.png}

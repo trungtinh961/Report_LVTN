@@ -24,6 +24,13 @@ Kiến trúc của hệ thống được thiết kế đơn giản như Hình \r
     \end{itemize}
     
     \item \textbf{Services}: nhận yêu cầu từ controller để xử lý một tác vụ nào đó và trả về kết quả. Một service cũng có thể gọi và được gọi từ các service khác. Một service có thể là chủ của một hoặc nhiều model. Service sử dụng model để thao tác với cơ sở dữ liệu chứ không trực tiếp làm việc này.
+    \begin{itemize}
+        \item User service: Service chịu trách nhiệm quản lý user trong hệ thống. Mỗi khi user login vào hệ thống thì sẽ vào Service này để authen: Ban đầu user được yêu cầu sẽ nhập email và password, Sau khi authen là đúng user đó thì hệ thống sẽ sinh ra mã Token để gửi trả về cho user. Sau này cứ mỗi request lên hệ thống thì user sẽ gửi kèm theo mã Token để hệ thống có thể authen và author.
+        \item Order Service: Service chịu trách nhiệm tạo, xử lý, lưu trữ các thông tin về đơn đặt hàng cho xưởng nhuộm.
+        \item Notify Service: Service chịu trách nhiệm quản lý các thông báo cho hệ thống.
+        \item Payment Service: Service chịu trách nhiệm quản lý các thông tin về thanh toán giữa doanh nghiệp và các xưởng nhuộm.
+        \item General service: Service chịu trách nhiệm xử lí các nghiệp vụ b
+    \end{itemize}
     
     \item \textbf{Models} là thành phần thao tác trực tiếp với CSDL. Một model ánh xạ chính xác một quan hệ từ cơ sở dữ liệu và các ràng buộc liên quan. Các model có mối liên hệ với nhau bằng mối liên hệ của đối tượng.
     
