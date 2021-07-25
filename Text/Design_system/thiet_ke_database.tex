@@ -149,6 +149,7 @@ Sau khi thiết kế ERD nhóm tiến hành chuyển đổi thành các bảng t
         \label{orders}
     \end{table}
     
+    \newpage
     \item \textbf{import\_slip}
     \begin{table}[H]
         \centering
@@ -167,7 +168,24 @@ Sau khi thiết kế ERD nhóm tiến hành chuyển đổi thành các bảng t
         \label{import_slip}
     \end{table}
     
-    \newpage
+    \item \textbf{debt}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|m{3cm}|m{10cm}|}
+        \hline 
+            id & Mã giao dịch công nợ\\ \hline
+            type & Loại giao dịch \\ \hline
+            id\_transaction & Mã loại giao dịch\\ \hline
+            amount & Số tiền của giao dịch\\ \hline
+            create\_date & Ngày tạo giao dịch \\ \hline
+            total & Dư nợ\\ \hline
+            dyehouse\_id & Mã xưởng nhuộm\\
+        \hline 
+        \end{tabular}
+        \caption{Giao dịch công nợ}
+        \label{debt}
+    \end{table}
+    
     \item \textbf{export\_slip}
     \begin{table}[H]
         \centering
@@ -232,7 +250,6 @@ Sau khi thiết kế ERD nhóm tiến hành chuyển đổi thành các bảng t
         \label{payment}
     \end{table}
     
-    \newpage
     \item \textbf{fabric}
     \begin{table}[H]
         \centering
@@ -254,6 +271,7 @@ Sau khi thiết kế ERD nhóm tiến hành chuyển đổi thành các bảng t
         \label{fabric}
     \end{table}
 
+    \newpage
     \item \textbf{return\_slip}
     \begin{table}[H]
         \centering

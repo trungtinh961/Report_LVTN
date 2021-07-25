@@ -9,7 +9,8 @@
  left=30mm,
  top=30mm,
 }
-
+\usepackage{mwe}
+\usepackage{afterpage}
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{amsmath}
@@ -117,6 +118,13 @@
 \begin{document}
 
 \begin{titlepage}
+\newgeometry{
+ left=20mm,
+ top=20mm,
+ bottom=20mm,
+ right=20mm,
+}
+\afterpage{\aftergroup\restoregeometry}
 \begin{center}
 \textbf{{\Large ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH \\
 TRƯỜNG ĐẠI HỌC BÁCH KHOA \\
@@ -157,7 +165,7 @@ KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH}}
 \end{table}
 
 \begin{center}
-{\footnotesize {\large TP. HỒ CHÍ MINH, THÁNG 07/2021}}
+{\footnotesize {\large TP. HỒ CHÍ MINH, THÁNG 08/2021}}
 \end{center}
 \end{titlepage}
 

@@ -1,12 +1,12 @@
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=14cm]{Image/Technical/architecture.png}
+        \includegraphics[width=16cm]{Image/Technical/architecture.png}
         \caption{Kiến trúc hệ thống}
         \label{architecture}
     \end{center}
 \end{figure}
 
-Kiến trúc của hệ thống được thiết kế đơn giản như Hình \ref{architecture} bao gồm các thành phần sau:
+Kiến trúc của hệ thống được thiết kế như Hình \ref{architecture} bao gồm các thành phần sau:
 \subsubsection{Website (front-end)}
 \begin{itemize}
     \item Component: chứa các view hiển thị cho người dùng.
@@ -29,10 +29,10 @@ Kiến trúc của hệ thống được thiết kế đơn giản như Hình \r
         \item Order Service: Service chịu trách nhiệm tạo, xử lý, lưu trữ các thông tin về đơn đặt hàng cho xưởng nhuộm.
         \item Notify Service: Service chịu trách nhiệm quản lý các thông báo cho hệ thống.
         \item Payment Service: Service chịu trách nhiệm quản lý các thông tin về thanh toán giữa doanh nghiệp và các xưởng nhuộm.
-        \item General service: Service chịu trách nhiệm xử lí các nghiệp vụ b
+        \item General service: Service chịu trách nhiệm xử lí các nghiệp vụ business chung của hệ thống. Service này gồm nhiều Service tạo thành, có chức năng riêng lẻ.
     \end{itemize}
     
-    \item \textbf{Models} là thành phần thao tác trực tiếp với CSDL. Một model ánh xạ chính xác một quan hệ từ cơ sở dữ liệu và các ràng buộc liên quan. Các model có mối liên hệ với nhau bằng mối liên hệ của đối tượng.
+    \item \textbf{Models} là thành phần thao tác trực tiếp với CSDL. Một model ánh xạ chính xác một quan hệ từ cơ sở dữ liệu và các ràng buộc liên quan, các model có tên tương ứng. Các model có mối liên hệ với nhau bằng mối liên hệ của đối tượng.
     
     \item \textbf{Exception Filter} được dành riêng cho việc bắt các lỗi exception và phản hồi lỗi về cho người dùng. Việc chỉ định vai trò này cho một mình Exception Filter thể hiện rõ tính module hoá.
 

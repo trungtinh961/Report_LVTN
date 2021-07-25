@@ -30,4 +30,20 @@ Phần tiếp theo đây, nhóm sẽ trình bày về cấu trúc của mã ngu�
 
 
 
-\textbf{Về phía back-end}
+\textbf{Về phía back-end}, cấu trúc mã nguồn của back-end được chia theo các package chính sau:
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=2cm]{Image/Technical/backend_structure.png}
+        \caption{Cấu trúc mã nguồn Back-end}
+        \label{backend_structure}
+    \end{center}
+\end{figure}
+
+\begin{itemize}
+    \item dao: là nơi chúa các repository của dom. Tại đây diễn ra các thao tác trên cơ sở dữ liệu.
+    \item dom: là nơi chứa các object ánh xạ trực tiếp tới các thực thể của cơ sở dữ liệu, bao gồm bảng và các ràng buộc liên quan.
+    \item dto: là nơi chứa các đối tượng dùng để ánh xạ các object trong dom sang các object khác trong quá trình xử lí và ngược lại.
+    \item service: là nơi chứa luồng xử lí chính, là cầu nối cho tất cả.
+    \item utils: là nơi chứa các phần tử hỗ trợ như là hàm hash, sinh mã Token, tập trạng thái, custom exception,...
+    \item web: là nơi chứa các đối tượng có chức năng nhận và phản hồi các request từ front-end.
+\end{itemize}
