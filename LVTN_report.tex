@@ -115,11 +115,32 @@
 	numberfirstline=true
 }
 
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+\usepackage{lipsum}
+
+
+
 \begin{document}
 
 \begin{titlepage}
+
+\AddToShipoutPictureBG*{%
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=1pt]
+    ($ (current page.north west) + (2cm,-1.5cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.5cm,1.5cm) $);
+\draw[line width=3pt]
+    ($ (current page.north west) + (2.1cm,-1.6cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.6cm,1.6cm) $);
+\end{tikzpicture}
+}
+
 \newgeometry{
- left=20mm,
+ left=25mm,
  top=20mm,
  bottom=20mm,
  right=20mm,
@@ -164,11 +185,82 @@ KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH}}
 \end{tabular}
 \end{table}
 
+\vspace{0.5cm}
+
 \begin{center}
 {\footnotesize {\large TP. HỒ CHÍ MINH, THÁNG 08/2021}}
 \end{center}
 \end{titlepage}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+
+\AddToShipoutPictureBG*{%
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=1pt]
+    ($ (current page.north west) + (2cm,-1.5cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.5cm,1.5cm) $);
+\draw[line width=3pt]
+    ($ (current page.north west) + (2.1cm,-1.6cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.6cm,1.6cm) $);
+\end{tikzpicture}
+}
+
+\newgeometry{
+ left=25mm,
+ top=20mm,
+ bottom=20mm,
+ right=20mm,
+}
+\afterpage{\aftergroup\restoregeometry}
+\begin{center}
+\textbf{{\Large ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH \\
+TRƯỜNG ĐẠI HỌC BÁCH KHOA \\
+KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH}}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=3.5cm]{Image/hcmut.png}
+\end{center}
+\end{figure}
+
+\vspace{0.5cm}
+
+
+\begin{center}
+\textbf{{\Large LUẬN VĂN TỐT NGHIỆP ĐẠI HỌC}}\\
+\vspace{1cm}
+\textbf{{\Large XÂY DỰNG HỆ THỐNG QUẢN LÝ QUÁ TRÌNH GIA CÔNG NHUỘM CHO MỘT DOANH NGHIỆP VẢI SỢI TRÊN NỀN WEB}}\\
+\vspace{1cm}
+\textbf{{\Large Ngành: Khoa học Máy tính}}
+\end{center}
+
+\vspace{2cm}
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{lll}
+\hspace{5 cm}
+& \textbf{{\large GVHD:}} & {\large ThS. Nguyễn Thị Ái Thảo} \\
+& \textbf{{\large GVPB:}} & {\large ThS. Trần Quang}\\
+&  & \textbf{---o0o---} \\
+& \textbf{{\large SVTH1:}} & {\large Nguyễn Trung Tính - 1713521} \\
+& \textbf{{\large SVTH2:}} & {\large Nguyễn Xuân Huy - 1711574} \\
+\end{tabular}
+\end{table}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\footnotesize {\large TP. HỒ CHÍ MINH, THÁNG 08/2021}}
+\end{center}
+\end{titlepage}
 
 \thispagestyle{empty}
 
